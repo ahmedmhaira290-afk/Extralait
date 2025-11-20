@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ma vitrine - Extralait</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ====== Style global ====== */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f0fff0, #e6f7ff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      color: #0e8f6e;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    /* ====== En-tête ====== */
+    .hero-header {
+      background: linear-gradient(135deg, #b2f2bb, #d0ebff);
+      padding: 40px;
+      text-align: center;
+      border-bottom: 3px solid #0e8f6e;
+    }
+
+    .nav-buttons button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #0e8f6e;
+      color: white;
+      border-radius: 30px;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #0a6b50;
+      transform: scale(1.05);
+    }
+
+    /* ====== Section produits ====== */
+    #clothing {
+      padding: 40px;
+    }
+
+    .grid-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      padding: 30px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-card p {
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    /* ====== Valeurs nutritionnelles ====== */
+    #offers {
+      background: #f8fff9;
+      padding: 50px;
+      border-top: 3px solid #0e8f6e;
+      border-bottom: 3px solid #0e8f6e;
+    }
+
+    #offers h2 {
+      font-size: 2em;
+      color: #0e8f6e;
+    }
+
+    .nutrition-card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 25px auto;
+      max-width: 600px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .nutrition-card:hover {
+      transform: scale(1.03);
+    }
+
+    .nutrition-card h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .nutrition-card table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    .nutrition-card th, .nutrition-card td {
+      border-bottom: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+      font-size: 0.95em;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #0e8f6e;
+      color: white;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #095f46;
+      transform: scale(1.05);
+    }
+
+    .btn a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* ====== Contact ====== */
+    #contact {
+      padding: 40px;
+      background: linear-gradient(135deg, #d0ebff, #f0fff0);
+    }
+
+    #contact a {
+      color: #0e8f6e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #footer {
+      padding: 40px;
+      background: #0e8f6e;
+      color: white;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero-header">
+    <h1>Bienvenue sur ma vitrine</h1>
+    <div class="nav-buttons">
+      <button onclick="scrollToSection('clothing')">Nos produits</button>
+      <button onclick="scrollToSection('offers')">Valeurs nutritionnelles</button>
+      <button onclick="scrollToSection('contact')">À propos de nous</button>
+    </div>
+  </header>
+
+  <section id="clothing">
+    <h2>Nos produits</h2>
+    <p>Découvrez nos variétés de lait frais et nutritif !</p>
+
+    <div class="grid-gallery">
+      <a href="#prod1" class="product-card">
+        <img src="WhatsApp Image 2025-08-04 at 09.43.27_7c5469d3.jpg" alt="Lait biologique" />
+        <p style="color: #e63946;">Lait biologique</p>
+      </a>
+
+      <a href="#prod2" class="product-card">
+        <img src="WhatsApp Image 2025-08-04 at 09.43.27_e0abb0c0.jpg" alt="Lait écrémé" />
+        <p style="color: #2ecc71;">Lait écrémé</p>
+      </a>
+
+      <a href="#prod3" class="product-card">
+        <img src="WhatsApp Image 2025-08-04 at 09.43.28_05b16eea.jpg" alt="Lait faible en gras" />
+        <p style="color: #d16ba5;">Lait faible en gras</p>
+      </a>
+
+      <a href="#prod4" class="product-card">
+        <img src="WhatsApp Image 2025-08-04 at 09.43.28_7d0156f9.jpg" alt="Lait entier" />
+        <p style="color: #1e90ff;">Lait entier</p>
+      </a>
+
+      <a href="#prod5" class="product-card">
+        <img src="WhatsApp Image 2025-08-04 at 09.43.28_c8de1e42.jpg" alt="Lait au chocolat" />
+        <p style="color: #f1c40f;">Lait au chocolat</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="offers">
+    <h2>Valeurs nutritionnelles</h2>
+    <p>Analyse détaillée de chaque produit</p>
+
+    <div class="nutrition-card" id="prod1">
+      <h3 style="color:#e63946;">🥛 Lait biologique</h3>
+      <table>
+        <tr><th>Énergie</th><td>65 kcal</td></tr>
+        <tr><th>Protéines</th><td>3.3 g</td></tr>
+        <tr><th>Graisses</th><td>3.6 g</td></tr>
+        <tr><th>Calcium</th><td>120 mg</td></tr>
+
+      </table>
+                    <p> 💰 Prix : 11 dh </p>
+
+      <button class="btn"><a href="achat.html">Achat</a></button>
+    </div>
+
+    <div class="nutrition-card" id="prod2">
+      <h3 style="color:#2ecc71;">🥛 Lait écrémé</h3>
+      <table>
+        <tr><th>Énergie</th><td>35 kcal</td></tr>
+        <tr><th>Protéines</th><td>3.5 g</td></tr>
+        <tr><th>Graisses</th><td>0.3 g</td></tr>
+        <tr><th>Calcium</th><td>120 mg</td></tr>
+      </table>
+      <p> 💰 prix :12</p>
+      <button class="btn"><a href="achat.html">Achat</a></button>
+    </div>
+
+    <div class="nutrition-card" id="prod3">
+      <h3 style="color:#d16ba5;">🥛 Lait faible en gras</h3>
+      
+      <table>
+        <tr><th>Énergie</th><td>50 kcal</td></tr>
+        <tr><th>Protéines</th><td>3.3 g</td></tr>
+        <tr><th>Graisses</th><td>1.8 g</td></tr>
+        <tr><th>Calcium</th><td>118 mg</td></tr>
+      </table>
+       <p> 💰Prix : 9.5 dh</p>
+      <button class="btn"><a href="achat.html">Achat</a></button>
+    </div>
+
+    <div class="nutrition-card" id="prod4">
+      <h3 style="color:#1e90ff;">🥛 Lait entier</h3>
+
+      <table>
+        <tr><th>Énergie</th><td>68 kcal</td></tr>
+        <tr><th>Protéines</th><td>3.2 g</td></tr>
+        <tr><th>Graisses</th><td>3.9 g</td></tr>
+        <tr><th>Calcium</th><td>125 mg</td></tr>
+      </table>
+                          <p> 💰Prix : 11 dh </p>
+
+
+      <button class="btn"><a href="achat.html">Achat</a></button>
+    </div>
+
+    <div class="nutrition-card" id="prod5">
+      <h3 style="color:#f1c40f;">🥛 Lait au chocolat</h3>
+      <table>
+        <tr><th>Énergie</th><td>85 kcal</td></tr>
+        <tr><th>Protéines</th><td>3.4 g</td></tr>
+        <tr><th>Graisses</th><td>2.5 g</td></tr>
+        <tr><th>Sucre</th><td>8 g</td></tr>
+      </table>
+            <p> 💰 Prix : 13 dh .</p>
+
+      <button class="btn"><a href="achat.html">Achat</a></button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>À propos de nous</h2>
+    <p>Pour toute demande, contactez-nous :</p>
+    <p>
+      📞 <a href="tel:+212612345678">+212 6 12 34 56 78</a><br><br>
+      📧 <a href="mailto:info@extralait.com">info@extralait.com</a><br><br>
+      📩 <a href="https://www.dreamjob.ma/emploi/extralait-recrute-plusieurs-profils/">Recrutement : Postulez ici</a>
+    </p>
+  </section>
+
+  <section id="footer">
+    <ul>
+      <li><h3 style="color:rgb(52, 24, 63)">Plus d'informations sur l'entreprise :</h3></li>
+      <p>
+        Extralait, la Coopérative Agricole Laitière de Kénitra, fondée en 1953, est un pilier de l’industrie laitière marocaine.
+        Elle propose une gamme variée : lait pasteurisé, beurre, leben, lait fermenté aromatisé, fromages et desserts lactés.
+        Extralait est fière de ses marques phares : <b>Yovi, Yogo, Extralait, Extrabeurre</b> et <b>Extraleben</b>.
+      </p>
+    </ul>
+  </section>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

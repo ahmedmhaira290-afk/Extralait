@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page d'achat - Extralait</title>
+  <link rel="stylesheet" href="achat.css">
+</head>
+<body>
+  <div class="achat-container">
+    <h1>Achat de produit</h1>
+
+    <div class="produit-info">
+      <h2 id="nom-produit"></h2>
+      <p id="prix-produit"></p>
+    </div>
+    
+
+    <form id="form-achat">
+        <label for="pays">choisir le prodouit :</label>
+        <br>
+<select id="pays" name="pays">
+  <option value="maroc">lait biologie </option>
+  <option value="france">Lait écrémé</option>
+  <option value="espagne">Lait faible en gras</option>
+  <option value="italie">Lait entier</option>
+  <option value="italie">Lait au chocolat</option>
+      <label for="quantite">Quantité :</label>
+      <input type="number" id="quantite" name="quantite" min="1" value="1" required>
+
+</select>
+      <h3>Informations personnelles</h3>
+      <input type="text" id="nom" placeholder="Nom complet" required>
+      <input type="email" id="email" placeholder="Adresse e-mail" required>
+      <input type="text" id="adresse" placeholder="Adresse de livraison" required>
+
+      <h3>Informations de paiement</h3>
+      <input type="text" id="carte" placeholder="Numéro de carte bancaire" maxlength="16" required>
+      <input type="text" id="expiration" placeholder="MM/AA" maxlength="5" required>
+      <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+
+      <button type="submit">Payer maintenant</button>
+    </form>
+
+    <p id="message-confirmation"></p>
+
+    <a href="produit.html" class="retour">⬅ Retour à la vitrine</a>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
